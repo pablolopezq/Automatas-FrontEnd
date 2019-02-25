@@ -1,0 +1,35 @@
+<div>
+
+  <input type="text" #automata>
+  <input type="button" name="submitAutomata" value="Add Automata" (click)="onAutomataSubmit(automata.value)">
+  <hr/>
+
+  <input type="text" #state>
+  <input type="checkbox" #final>Final
+  <input type="button" name="submitState" value="Add State" (click)="onStateSubmit(state.value, final.checked)">
+  <hr/>
+
+  <input type="text" #alphabetValue>
+  <input type="button" name="submitAlphabet" value="Add to Alphabet" (click)="onAlphabetSubmit(alphabetValue.value)">
+  <input type="button" name="deleteAlphabet" value="Remove from Alphabet" (click)="onAlphabetRemove(alphabetValue.value)">
+  <hr/>
+
+  <input type="text" #transitionSource>
+  <input type="text" #transitionDestination>
+  <input type="text" #transitionValue>
+  <input type="button" name="submitTransition" value="Add Transition" (click)="onTransitionSubmit(transitionSource.value, transitionDestination.value, transitionValue.value)">
+  <hr/>
+
+  <input type="text" #evaluate>
+  <input type="button" name="evaluate" value="Evaluate Expression" (click)="onEvaluate(evaluate.value)">
+  <hr/>
+
+  <input type="text" #regex>
+  <input type="text" #aName>
+  <input type="button" name="createRegex" value="Create Automata from Regex" (click)="onRegex(regex.value, aName.value)">
+  <hr/>
+
+  <input type="button" name="toNFA" value="Convert to NFA" (click)="onToNFA()">
+  <input type="button" name="toDFA" value="Convert to DFA" (click)="onToDFA()">
+
+</div>
